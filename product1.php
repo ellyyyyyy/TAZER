@@ -8,7 +8,7 @@
 	<title>Тейзер</title>
 </head>
 <body>
-	<main>sdfsdfsdf
+	<main>
 		<?php
 		include 'connect.php'
 		?>
@@ -73,7 +73,7 @@
 		    </div>
 		</div>
 	</main>
-	
+
 	<footer>
 		<div class="wrapper">
 			<div class="wrapper_footer">

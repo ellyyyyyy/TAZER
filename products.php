@@ -14,14 +14,14 @@
 		?>
 
 		<div class="wrapper">
-				<nav>
+		<nav>
 					<ul class="nav">
 						<li class="logo"><a href="index.php">TAZER</a></li>
-						<li class="nav_item"><a href="index.php">Главная</a></li>
+						<li class="nav_item"><a href="">Главная</a></li>
 						<li class="nav_item"><a href="products.php">Товары</a></li>
-						<li class="nav_item"><a href="">Поддержка</a></li>
+						<li class="nav_item"><a href="help.php">Поддержка</a></li>
 						  <div id="menuToggle">
-						    <input type="checkbox" />
+						    <input type="checkbox"/>
 						    <span></span>
 						    <span></span>
 						    <span></span>
@@ -29,9 +29,15 @@
 						      <a href="#"><li>Корзина</li></a>
 						      <a href="#"><li>Авторизация</li></a>
 						      <a href="#"><li>Регистрация</li></a>
+						      <div class="nav_wrapp">
+						<li class="nav_item1"><a href="index.php">Главная</a></li>
+						<li class="nav_item1"><a href="products.php">Товары</a></li>
+						<li class="nav_item1"><a href="help.php">Поддержка</a></li>
+							  </div>
 						    </ul>
 						  </div>
 					</ul>
+				</nav>
 			</div>
 
 			<div class="slider">
@@ -125,10 +131,10 @@
 			<h2 class="collections_text">НАШИ КОЛЛЕКЦИИ</h2>
 			<img class="collections_zone" src="/img/collections.png">
 			<div class="collections_wrapper">
-				<div class="collection1"></div>
-				<a href="#" class="collection1_text">Tazer Quartz Pink</a>
-				<div class="collection2"></div>
-				<a href="#" class="collection2_text">Tazer Mercury White</a>
+			<div class="collection1"></div>
+				<a href="collection1.php" class="collection1_text">Tazer Quartz Pink</a>
+			<div class="collection2"></div>
+				<a href="collection2.php" class="collection2_text">Tazer Mercury White</a>
 		</div> 
 
 		<div class="wrapper">
@@ -154,18 +160,17 @@
 				<div class="tazer">
 					<p class="footer_p">Tazer</p>
 					<ul class="spisok">
-						<li><a class="spisok_item" href="">Главная</a></li>
-						<li><a class="spisok_item" href="">Товары</a></li>
-						<li><a class="spisok_item" href="">О нас</a></li>
-						<li><a class="spisok_item" href="">Поддержка</a></li>
+						<li><a class="spisok_item" href="index.php">Главная</a></li>
+						<li><a class="spisok_item" href="products.php">Товары</a></li>
+						<li><a class="spisok_item" href="help.php">Поддержка</a></li>
 					</ul>
 				</div>
 				<div class="contacts">
 					<p class="footer_p">Контакты</p>
 					<ul class="spisok">
-						<li><p class="spisok_item" href="">Телефон: +79430535245</p></li>
-						<li><p class="spisok_item" href="">Почта: tazer@gmail.com</p></li>
-						<li><p class="spisok_item" href="">Локация: Чистый пер., 17, Москва, 19614</p></li>
+						<li><p class="spisok_item" >Телефон: +79430535245</p></li>
+						<li><p class="spisok_item" >Почта: tazer@gmail.com</p></li>
+						<li><p class="spisok_item" >Локация: Чистый пер., 17, Москва, 19614</p></li>
 					</ul>
 				</div>
 			</div>

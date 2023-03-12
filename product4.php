@@ -13,14 +13,14 @@
 		include 'connect.php'
 		?>
 		<div class="wrapper">
-				<nav>
+		<nav>
 					<ul class="nav">
 						<li class="logo"><a href="index.php">TAZER</a></li>
-						<li class="nav_item"><a href="index.php">Главная</a></li>
+						<li class="nav_item"><a href="">Главная</a></li>
 						<li class="nav_item"><a href="products.php">Товары</a></li>
-						<li class="nav_item"><a href="">Поддержка</a></li>
+						<li class="nav_item"><a href="help.php">Поддержка</a></li>
 						  <div id="menuToggle">
-						    <input type="checkbox" />
+						    <input type="checkbox"/>
 						    <span></span>
 						    <span></span>
 						    <span></span>
@@ -28,15 +28,21 @@
 						      <a href="#"><li>Корзина</li></a>
 						      <a href="#"><li>Авторизация</li></a>
 						      <a href="#"><li>Регистрация</li></a>
+						      <div class="nav_wrapp">
+						<li class="nav_item1"><a href="index.php">Главная</a></li>
+						<li class="nav_item1"><a href="products.php">Товары</a></li>
+						<li class="nav_item1"><a href="help.php">Поддержка</a></li>
+							  </div>
 						    </ul>
 						  </div>
 					</ul>
+				</nav>
 			</div>
 	<div class="product1">
-	    <div class="slide11 overlay">
+	    <div class="slide14 overlay">
 	    <div class="wrapper_slide">
-	      <a href="#" class="slider__caption ">Tazer DeathStalker V2</a>
-	      <p class="slider__txt ">Сократите конкуренцию с Tazer DeathStalker V2 — ультратонкой оптической клавиатурой, оптимизированной для обеспечения высочайшей производительности и долговечности. Благодаря совершенно новым низкопрофильным переключателям для сверхбыстрых игр в прочном ультратонком корпусе для длительного эргономичного использования.</p>
+	      <a href="#" class="slider__caption ">Tazer Strider Chroma</a>
+	      <p class="slider__txt ">Представляем Tazer Strider Chroma — первый в мире гибридный коврик для мыши с несколькими зонами подсветки. Благодаря 19 настраиваемым зонам подсветки  вам доступен уровень индивидуальной настройки, которому нет равных. Кроме того, поверхность коврика, сочетающая лучшие качества различных покрытий, обеспечит совершенную точность управления.</p>
 	 	</div>
 	 	</div>
 	</div>
@@ -44,14 +50,14 @@
 	<div class="wrapper">
 	<div class="product_info">
 		<div class="product_text">
-			<h2>НИЗКОПРОФИЛЬНЫЕ ОПТИЧЕСКИЕ ПЕРЕКЛЮЧАТЕЛИ</h2>
-			<p>Вооружившись таким же молниеносным откликом, который является отличительной чертой всех наших оптических клавиатур, выполняйте более быстрые нажатия клавиш с помощью совершенно новых переключателей, которые обладают более низким расстаянием срабатывания для уменьшения хода клавиш, а срок службы клавиш составляет 70 миллионов нажатий для долговременной работы.</p>
-			<h2>СВЕРХТОНКИЙ КОРПУС С ПРОЧНОЙ АЛЮМИНИЕВОЙ ВЕРХНЕЙ ПЛАСТИНОЙ</h2>
-			<p>Тонкий профиль клавиатуры обеспечивает нейтральное положение руки в течение долгих часов использования с небольшим напряжением, а верхняя пластина из алюминиевого сплава 5052 обеспечивает большую долговечность с удовлетворительным весом.</p>
+			<h2>ГИБРИДНЫЙ МЯГКИЙ/ЖЕСТКИЙ КОВРИК</h2>
+			<p>Создан для оптимального баланса скорости и контроля — с легким скольжением для быстрых рывков и надежной тормозной силой для неизменной точности. Разработанный как единая поверхность, коврик обеспечивает большую долговечность, в отличие от ковриков с покрытием, которые со временем изнашиваются и работают хуже.</p>
+			<h2>УВЕЛИЧЕННЫЙ РАЗМЕР</h2>
+			<p>Большой размер коврика предоставляет достаточно места для клавиатуры и мыши и максимально подсвечивает ваше рабочее место с помощью RGB-подсветки.</p>
 		</div>
 		<div class="product_buy">
 			<div class="product_buy_text">
-			<p>15 499 руб</p>
+			<p>5 999 руб</p>
 			<p>В наличии</p>
 			</div>
 			<form class="buy" action="">
@@ -83,18 +89,17 @@
 				<div class="tazer">
 					<p class="footer_p">Tazer</p>
 					<ul class="spisok">
-						<li><a class="spisok_item" href="">Главная</a></li>
-						<li><a class="spisok_item" href="">Товары</a></li>
-						<li><a class="spisok_item" href="">О нас</a></li>
-						<li><a class="spisok_item" href="">Поддержка</a></li>
+						<li><a class="spisok_item" href="index.php">Главная</a></li>
+						<li><a class="spisok_item" href="products.php">Товары</a></li>
+						<li><a class="spisok_item" href="help.php">Поддержка</a></li>
 					</ul>
 				</div>
 				<div class="contacts">
 					<p class="footer_p">Контакты</p>
 					<ul class="spisok">
-						<li><p class="spisok_item" href="">Телефон: +79430535245</p></li>
-						<li><p class="spisok_item" href="">Почта: tazer@gmail.com</p></li>
-						<li><p class="spisok_item" href="">Локация: Чистый пер., 17, Москва, 19614</p></li>
+						<li><p class="spisok_item" >Телефон: +79430535245</p></li>
+						<li><p class="spisok_item" >Почта: tazer@gmail.com</p></li>
+						<li><p class="spisok_item" >Локация: Чистый пер., 17, Москва, 19614</p></li>
 					</ul>
 				</div>
 			</div>

@@ -8,31 +8,93 @@
 	<title>Тейзер</title>
 </head>
 <body>
+
 	<main>
 		<?php
-		include 'connect.php'
+		include 'connect.php';
 		?>
+
+	<form action="logout.php" method="POST">
+		
+		<input type="submit" value="выйти">
+	    </form>
+
+
+<div class="container">
+    <div id="otkrutokno" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Регистрация</h3>
+            <a href="#zakrutokno" title="Close" class="close">×</a>
+          </div>
+          <div class="modal-body">
+		  <form method="post" action="registration.php">
+			<label for="name">Имя:</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="password">Пароль:</label>
+			<input type="password" id="password" name="password" required>
+
+			<label for="confirm_password">Подтвердите пароль:</label>
+			<input type="password" id="confirm_password" name="confirm_password" required>
+
+			<button type="submit">Зарегистрироваться</button>
+			</form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="otkrutokno2" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Авторизация</h3>
+            <a href="#zakrutokno" title="Close" class="close">×</a>
+          </div>
+          <div class="modal-body">
+		  <form action="login.php" method="POST">
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+		<br>
+		<label for="password">Пароль:</label>
+		<input type="password" id="password" name="password" required>
+		<br>
+		<input type="submit" value="Войти">
+	    </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 	<div class="intro">
 		<div class="wrapper">
 				<nav>
 					<ul class="nav">
-						<li class="logo"><a href="">TAZER</a></li>
+						<li class="logo"><a href="index.php">TAZER</a></li>
 						<li class="nav_item"><a href="">Главная</a></li>
 						<li class="nav_item"><a href="products.php">Товары</a></li>
-						<li class="nav_item"><a href="">Поддержка</a></li>
+						<li class="nav_item"><a href="help.php">Поддержка</a></li>
 						  <div id="menuToggle">
-						    <input type="checkbox" />
+						    <input type="checkbox"/>
 						    <span></span>
 						    <span></span>
 						    <span></span>
 						    <ul id="menu">
 						      <a href="#"><li>Корзина</li></a>
-						      <a href="#"><li>Авторизация</li></a>
-						      <a href="#"><li>Регистрация</li></a>
+						      <a href="#otkrutokno2"><li>Авторизация</li></a>
+						      <a href="#otkrutokno"><li>Регистрация</li></a>
 						      <div class="nav_wrapp">
-						<li class="nav_item1"><a href="">Главная</a></li>
+						<li class="nav_item1"><a href="index.php">Главная</a></li>
 						<li class="nav_item1"><a href="products.php">Товары</a></li>
-						<li class="nav_item1"><a href="">Поддержка</a></li>
+						<li class="nav_item1"><a href="help.php">Поддержка</a></li>
 							  </div>
 						    </ul>
 						  </div>
@@ -111,7 +173,7 @@
 			<div class="help">
 				<p class="help_title">Нужна помощь?</p>
 				<p class="help_subtitle">Вы сможете найти ответы на странице Поддержка</p>
-				<button class="help_button"><a href="" class="button_text">Узнать больше</a></button>
+				<button class="help_button"><a href="help.php" class="button_text">Узнать больше</a></button>
 			</div>
 		</div>
 
@@ -120,9 +182,9 @@
 			<img class="collections_zone" src="/img/collections.png">
 			<div class="collections_wrapper">
 				<div class="collection1"></div>
-				<a href="#" class="collection1_text">Tazer Quartz Pink</a>
+				<a href="collection1.php" class="collection1_text">Tazer Quartz Pink</a>
 				<div class="collection2"></div>
-				<a href="#" class="collection2_text">Tazer Mercury White</a>
+				<a href="collection2.php" class="collection2_text">Tazer Mercury White</a>
 		</div> 
 
 		<div class="wrapper">
@@ -148,18 +210,17 @@
 				<div class="tazer">
 					<p class="footer_p">Tazer</p>
 					<ul class="spisok">
-						<li><a class="spisok_item" href="">Главная</a></li>
-						<li><a class="spisok_item" href="">Товары</a></li>
-						<li><a class="spisok_item" href="">О нас</a></li>
-						<li><a class="spisok_item" href="">Поддержка</a></li>
+						<li><a class="spisok_item" href="index.php">Главная</a></li>
+						<li><a class="spisok_item" href="products.php">Товары</a></li>
+						<li><a class="spisok_item" href="help.php">Поддержка</a></li>
 					</ul>
 				</div>
 				<div class="contacts">
 					<p class="footer_p">Контакты</p>
 					<ul class="spisok">
-						<li><p class="spisok_item" href="">Телефон: +79430535245</p></li>
-						<li><p class="spisok_item" href="">Почта: tazer@gmail.com</p></li>
-						<li><p class="spisok_item" href="">Локация: Чистый пер., 17, Москва, 19614</p></li>
+						<li><p class="spisok_item" >Телефон: +79430535245</p></li>
+						<li><p class="spisok_item" >Почта: tazer@gmail.com</p></li>
+						<li><p class="spisok_item" >Локация: Чистый пер., 17, Москва, 19614</p></li>
 					</ul>
 				</div>
 			</div>

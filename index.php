@@ -12,10 +12,10 @@
 	<main>
 		<?php
 		include 'connect.php';
+		error_reporting(E_ERROR | E_PARSE);
+		session_start();
+		$status = $_SESSION['login_status'];
 		?>
-		<form action="logout.php" method="POST">
-			<input type="submit" value="выйти">
-		</form>
 
 		<div class="intro">
 			<div class="wrapper">
@@ -31,9 +31,20 @@
 								<span></span>
 								<span></span>
 								<ul id="menu">
-								<a href="#"><li>Корзина</li></a>
-								<a href="login.php"><li>Авторизация</li></a>
-								<a href="registration.php"><li>Регистрация</li></a>
+								<a href="account.php"><li>Корзина</li></a>
+								<?php
+									if ($status) {
+									?>
+										<a href="logout.php"><li>Выйти</li></a>
+									<?php
+									}
+									else {
+									?>
+										<a href="login.php"><li>Авторизация</li></a>
+										<a href="registration.php"><li>Регистрация</li></a>
+									<?php
+									}
+								?>
 								<div class="nav_wrapp">
 									<li class="nav_item1 main_text"><a href="index.php">Главная</a></li>
 									<li class="nav_item1 main_text"><a href="products.php">Товары</a></li>
@@ -95,19 +106,22 @@
 		}
 			if($result -> num_rows > 0) {
 				while($row = $result -> fetch_assoc()) { ?>
+				<form action='addcart.php?id=<?= $row['id'] ?>' method='post'>
 				<div class="products_item" data-category="<?= $row['category'] ?>"> 
-				<a href="#" class="cart"><img src="svg/cart.svg" alt=""></a>
+				<input type='submit' name='add' id='add' value='Add to Cart'>
 				<img class="products_img" src="img/<?= $row['id'] ?>.png" alt="1">
 				<p class="products_name"><?= $row['name'] ?></p>
 				<div class="products_wrapper">
 				<p class="products_price"><?= $row['price'] ?></p>
 				</div>
 				</div>
+				</form>
 				<?php
 				}
 			}
 			?>
 		</div>
+		
 		</div>
 
 			<div class="wrapper_help">

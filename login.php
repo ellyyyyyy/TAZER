@@ -37,7 +37,10 @@ if(isset($_POST['submit']))
         // Ставим куки
         setcookie("id", $data['user_id'], time()+60*60*24*30, "/");
         setcookie("hash", $hash, time()+60*60*24*30, "/", null, null, true); // httponly !!!
+        session_start();
+        $_SESSION['login_status'] = true;
 
+        
         // Переадресовываем браузер на страницу проверки нашего скрипта
         header("Location: check.php"); exit();
     }

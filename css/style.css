@@ -95,7 +95,7 @@ body {
 }
 
 .nav_item1 {
-  margin-right: 150px;
+  margin-right: 150px; display: none;
 }
 
 .nav a {

@@ -22,8 +22,6 @@
         $_SESSION['shoppingcart'] = [];
     }
 
-    $quantity = $_POST['quantity'];
-
     $item = [
         "id"       => $id,
         "name"     => $name,
@@ -35,6 +33,6 @@
     array_push($_SESSION['shoppingcart'], $item);
 
     // Once added let's take the user to the cart page
-    header("Location: account.php");
+    header("Location: ../index.php");
     }
 ?>

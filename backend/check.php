@@ -22,7 +22,7 @@ if (isset($_COOKIE['id']) and isset($_COOKIE['hash']))
     }
     else
     {
-        header("Location: index.php");
+        header("Location: ../index.php");
     }
 }
 else
@@ -30,8 +30,8 @@ else
     print "<h2 class='meow'>Включите куки</h2>";
 }
 ?>
-<link rel="stylesheet" href="css/style.css?<?php echo time(); ?>">
-<link rel="stylesheet" href="css/back.css?<?php echo time(); ?>">
+<link rel="stylesheet" href="../css/style.css?<?php echo time(); ?>">
+<link rel="stylesheet" href="../css/back.css?<?php echo time(); ?>">
   <ul class="circles">
                     <li></li>
                     <li></li>

@@ -500,7 +500,7 @@ input[type="radio"]:checked + .label {
   margin-top: 1.5625vw;
   transition: all 0.5s ease-out;
 }
-.......................................................... .help_button:hover {
+.help_button:hover {
   background: #ffffff;
   border-radius: 6px;
   background: #9a9a9a;
@@ -516,7 +516,7 @@ input[type="radio"]:checked + .label {
   text-decoration: none;
 }
 
-/*Коллекции*/
+/*Коллекции******************************************/
 
 .collections_text {
   font-family: "Montserrat";
@@ -610,7 +610,7 @@ input[type="radio"]:checked + .label {
   color: #484848;
 }
 
-/*Подписка на рассылку*/
+/*Подписка на рассылку**************************************/
 
 .subscribe {
   display: flex;
@@ -681,7 +681,7 @@ input::placeholder {
   color: #ffffff;
 }
 
-/*Подвал*/
+/*Подвал*********************************************/
 
 .wrapper_footer {
   margin-top: 150px;
@@ -733,7 +733,7 @@ input::placeholder {
   color: #9a9a9a;
 }
 
-/*Страцина товаров*/
+/*Страцина товаров*****************************************/
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
@@ -1194,13 +1194,6 @@ input[type="radio"]:checked + .label.white {
   outline: 0;
 }
 
-@media (min-width: 768px) {
-  .modal-content {
-    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  }
-}
-
 /* свойства для заголовка модального окна */
 .modal-header {
   display: -webkit-box;
@@ -1328,33 +1321,7 @@ input[type="radio"]:checked + .label.white {
   margin-top: 90px;
 }
 
-.wrapper_cart {
-  max-width: 67vw;
-  margin: 0 auto;
-  display: flex;
-  margin-top: 5.21vw;
-}
-
-.products_list3 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-bottom: 3.65vw;
-  min-height: 36.46vw;
-  width: 45.83vw;
-  margin-right: 20px;
-}
-
-/*Медиа*/
-@media (max-width: 1300px) {
-  .nav_item {
-    display: none;
-  }
-
-  .nav_item1 {
-    display: block;
-  }
-}
+/* Страница аккаунта****************************/
 
 .btn {
   background-color: transparent;
@@ -1381,4 +1348,40 @@ button:active {
 }
 .btn-slide-left:hover {
   background-position: left bottom;
+}
+
+.wrapper_cart {
+  max-width: 67vw;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 5.21vw;
+}
+
+.products_list3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 3.65vw;
+  min-height: 36.46vw;
+  width: 45.83vw;
+  margin-right: 20px;
+}
+
+/*Медиа*************************************/
+
+@media (max-width: 1300px) {
+  .nav_item {
+    display: none;
+  }
+
+  .nav_item1 {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
 }

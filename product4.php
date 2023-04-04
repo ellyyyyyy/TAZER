@@ -10,34 +10,49 @@
 <body>
 	<main>
 		<?php
-		include 'connect.php'
+		include 'backend/connect.php';
+		error_reporting(E_ERROR | E_PARSE);
+		session_start();
+		$status = $_SESSION['login_status'];
 		?>
 		<div class="wrapper">
-		<nav>
-					<ul class="nav">
+			<nav>
+				<ul class="nav">
 						<li class="logo"><a href="index.php">TAZER</a></li>
-						<li class="nav_item"><a href="">Главная</a></li>
-						<li class="nav_item"><a href="products.php">Товары</a></li>
-						<li class="nav_item"><a href="help.php">Поддержка</a></li>
-						  <div id="menuToggle">
-						    <input type="checkbox"/>
-						    <span></span>
-						    <span></span>
-						    <span></span>
-						    <ul id="menu">
-						      <a href="#"><li>Корзина</li></a>
-						      <a href="#"><li>Авторизация</li></a>
-						      <a href="#"><li>Регистрация</li></a>
-						      <div class="nav_wrapp">
-						<li class="nav_item1"><a href="index.php">Главная</a></li>
-						<li class="nav_item1"><a href="products.php">Товары</a></li>
-						<li class="nav_item1"><a href="help.php">Поддержка</a></li>
-							  </div>
-						    </ul>
-						  </div>
+						<li class="nav_item main_text"><a href="">Главная</a></li>
+						<li class="nav_item main_text"><a href="products.php">Товары</a></li>
+						<li class="nav_item main_text"><a href="help.php">Поддержка</a></li>
+						<div id="menuToggle">
+							<input type="checkbox"/>
+							<span></span>
+							<span></span>
+							<span></span>
+							<ul id="menu">
+								<a href="account.php"><li>Корзина</li></a>
+								<?php
+									if ($status) {
+									?>
+										<a href="backend/logout.php"><li>Выйти</li></a>
+									<?php
+									}
+									else {
+									?>
+										<a href="login.php"><li>Авторизация</li></a>
+										<a href="registration.php"><li>Регистрация</li></a>
+									<?php
+									}
+								?>
+								<div class="nav_wrapp">
+									<li class="nav_item1 main_text"><a href="index.php">Главная</a></li>
+									<li class="nav_item1 main_text"><a href="products.php">Товары</a></li>
+									<li class="nav_item1 main_text"><a href="help.php">Поддержка</a></li>
+								</div>
+							</ul>
+						</div>
 					</ul>
 				</nav>
-			</div>
+		</div>
+
 	<div class="product1">
 	    <div class="slide14 overlay">
 	    <div class="wrapper_slide">

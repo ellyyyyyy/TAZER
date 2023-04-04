@@ -10,81 +10,81 @@
 <body>
 	<main>
 		<?php
-		include 'connect.php'
+		include 'backend/connect.php';
+		error_reporting(E_ERROR | E_PARSE);
+		session_start();
+		$status = $_SESSION['login_status'];
 		?>
-
 		<div class="wrapper">
-		<nav>
-					<ul class="nav">
-						<li class="logo"><a href="index.php">TAZER</a></li>
-						<li class="nav_item"><a href="">Главная</a></li>
-						<li class="nav_item"><a href="products.php">Товары</a></li>
-						<li class="nav_item"><a href="help.php">Поддержка</a></li>
-						  <div id="menuToggle">
-						    <input type="checkbox"/>
-						    <span></span>
-						    <span></span>
-						    <span></span>
-						    <ul id="menu">
-						      <a href="#"><li>Корзина</li></a>
-						      <a href="#"><li>Авторизация</li></a>
-						      <a href="#"><li>Регистрация</li></a>
-						      <div class="nav_wrapp">
-						<li class="nav_item1"><a href="index.php">Главная</a></li>
-						<li class="nav_item1"><a href="products.php">Товары</a></li>
-						<li class="nav_item1"><a href="help.php">Поддержка</a></li>
-							  </div>
-						    </ul>
-						  </div>
-					</ul>
-				</nav>
+			<nav>
+				<ul class="nav">
+					<li class="logo"><a href="index.php">TAZER</a></li>
+					<li class="nav_item"><a href="">Главная</a></li>
+					<li class="nav_item"><a href="products.php">Товары</a></li>
+					<li class="nav_item"><a href="help.php">Поддержка</a></li>
+					<div id="menuToggle">
+						<input type="checkbox"/>
+						<span></span>
+						<span></span>
+						<span></span>
+						<ul id="menu">
+							<a href="#"><li>Корзина</li></a>
+							<a href="#"><li>Авторизация</li></a>
+							<a href="#"><li>Регистрация</li></a>
+							<div class="nav_wrapp">
+								<li class="nav_item1"><a href="index.php">Главная</a></li>
+								<li class="nav_item1"><a href="products.php">Товары</a></li>
+								<li class="nav_item1"><a href="help.php">Поддержка</a></li>
+							</div>
+						</ul>
+					</div>
+				</ul>
+			</nav>
 			</div>
 
             <div class="product1">
-	    <div class="slide16 overlay">
-	    <div class="wrapper_slide">
-	      <a href="#" class="slider__caption ">СОЗДАНА, ЧТОБЫ ВЫДЕЛЯТЬСЯ</a>
-	      <p class="slider__txt ">Для тех, кто создан быть смелым, нет лучшего способа заявить о себе. Откройте для себя нашу любимую коллекцию Tazer Quartz и убедитесь в ее привлекательности.</p>
-	 	</div>
-	 	</div>
-	</div>
-
-
-			<div class="wrapper">
-			<div class="products">
-				<form class="filters" method="get">
-				    <label>
-					  <label class="radio">
-					  	<p class="radio_text ">Все</p>
-					    <input class="hidden" type="radio" name="category" value="" checked>
-					    <span class="label pink"></span>
-					  </label>
-					  <label class="radio">
-					  	<p class="radio_text">Мыши</p>
-					    <input class="hidden" type="radio" name="category" value="mouse">
-					    <span class="label pink"></span>
-					  </label>
-					  <label class="radio">
-					  	<p class="radio_text">Клавиатуры</p>
-					    <input class="hidden" type="radio" name="category" value="keyboard">
-					    <span class="label pink"></span>
-					  </label>
-					  <label class="radio">
-					  	<p class="radio_text">Наушники</p>
-					    <input class="hidden" type="radio" name="category" value="headphones">
-					    <span class="label pink"></span>
-					  </label>
-					  	<label class="radio">
-					  	<p class="radio_text">Коврики</p>
-					    <input class="hidden" type="radio" name="category" value="mats">
-					    <span class="label pink"></span>
-					  </label>
-				  <button class="filter_button pink" type="submit">Применить фильтры</button>
-				</form>
-
+	    		<div class="slide16 overlay">
+	    			<div class="wrapper_slide">
+	      				<a href="#" class="slider__caption ">СОЗДАНА, ЧТОБЫ ВЫДЕЛЯТЬСЯ</a>
+	      				<p class="slider__txt ">Для тех, кто создан быть смелым, нет лучшего способа заявить о себе. Откройте для себя нашу любимую коллекцию Tazer Quartz и убедитесь в ее привлекательности.</p>
+	 				</div>
+	 			</div>
 			</div>
 
-			<div class="products_list">
+			<div class="wrapper">
+				<div class="products">
+					<form class="filters" method="get">
+						<label>
+						<label class="radio">
+							<p class="radio_text ">Все</p>
+							<input class="hidden" type="radio" name="category" value="" checked>
+							<span class="label pink"></span>
+						</label>
+						<label class="radio">
+							<p class="radio_text">Мыши</p>
+							<input class="hidden" type="radio" name="category" value="mouse">
+							<span class="label pink"></span>
+						</label>
+						<label class="radio">
+							<p class="radio_text">Клавиатуры</p>
+							<input class="hidden" type="radio" name="category" value="keyboard">
+							<span class="label pink"></span>
+						</label>
+						<label class="radio">
+							<p class="radio_text">Наушники</p>
+							<input class="hidden" type="radio" name="category" value="headphones">
+							<span class="label pink"></span>
+						</label>
+							<label class="radio">
+							<p class="radio_text">Коврики</p>
+							<input class="hidden" type="radio" name="category" value="mats">
+							<span class="label pink"></span>
+						</label>
+					<button class="filter_button pink" type="submit">Применить фильтры</button>
+					</form>
+				</div>
+
+				<div class="products_list">
 				<?php
 				$category = isset($_GET['category']) ? $_GET['category'] : '';
 				if ($category) {
@@ -93,24 +93,22 @@
 				else {
 				 $result = $conn -> query("select * from products where collection='pink'");
 				}
-                    if($result -> num_rows > 0) {
-                        while($row = $result -> fetch_assoc()) { ?>
-                        <div class="products_item" data-category="<?= $row['category'] ?>"> 
-                        <a href="#" class="cart"><img src="svg/cart.svg" alt=""></a>
-                    	<img class="products_img" src="img/<?= $row['id'] ?>.png" alt="1">
-                    	<p class="products_name"><?= $row['name'] ?></p>
-                    	<div class="products_wrapper">
-						<p class="products_price"><?= $row['price'] ?></p>
+                if($result -> num_rows > 0) {
+					while($row = $result -> fetch_assoc()) { ?>
+					<div class="products_item" data-category="<?= $row['category'] ?>"> 
+						<a href="#" class="cart"><img src="svg/cart.svg" alt=""></a>
+						<img class="products_img" src="img/<?= $row['id'] ?>.png" alt="1">
+						<p class="products_name"><?= $row['name'] ?></p>
+						<div class="products_wrapper">
+							<p class="products_price"><?= $row['price'] ?></p>
 						</div>
-						</div>
-						<?php
-                        }
-                    }
-                    ?>
-
+					</div>
+				<?php
+					}
+                }
+                ?>
+				</div>
 			</div>
-		</div>
-
 	</main>
 
 	<footer>
@@ -138,8 +136,5 @@
 			</div>
 		</div>
 	</footer>
-
-
-
 </body>
 </html>

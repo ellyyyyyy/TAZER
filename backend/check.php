@@ -22,7 +22,8 @@ if (isset($_COOKIE['id']) and isset($_COOKIE['hash']))
     }
     else
     {
-        header("Location: ../index.php");
+        $message = "Вы успешно авторизовались";
+        header("Location: ../index.php?message=" . urlencode($message));
     }
 }
 else

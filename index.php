@@ -10,6 +10,11 @@
 <body>
 
 	<main>
+		<div class="modal1" id="message-modal">
+			<div class="modal-content1">
+				<p class="main_text" id="message-text"></p>
+			</div>
+		</div>
 		<?php
 		include 'backend/connect.php';
 		error_reporting(E_ERROR | E_PARSE);
@@ -114,7 +119,7 @@
 							<img class="products_img" src="img/<?= $row['id'] ?>.png" alt="1">
 							<p class="products_name"><?= $row['name'] ?></p>
 							<div class="products_wrapper">
-								<p class="products_price"><?= $row['price'] ?></p>
+								<p class="products_price"><?= $row['price'] ?> ₽</p>
 							</div>
 						</div>
 					</form>
@@ -150,7 +155,7 @@
 					<p class="sub_text">Подпишитесь</p>
 					<p class="subsub_text">на расслылку<br>новостей!</p>
 				</div>
-				<form class="form_email" action="subscribe.php" method="post">
+				<form class="form_email" action="backend/subscribe.php" method="post">
 					<input class="email" placeholder="Ваша почта" type="email" id="email" name="email"><br><br>
 					<input class="email_button" type="submit" value="">
 				</form>
@@ -184,4 +189,6 @@
 		</div>
 	</footer>
 </body>
+<script src="js/message.js"></script>
 </html>
+

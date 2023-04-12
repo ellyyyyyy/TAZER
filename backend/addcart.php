@@ -33,6 +33,7 @@
     array_push($_SESSION['shoppingcart'], $item);
 
     // Once added let's take the user to the cart page
-    header("Location: ../index.php");
+    $message = "Товар добавлен в корзину";
+    header("Location: ../index.php?message=" . urlencode($message));
     }
 ?>

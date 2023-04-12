@@ -19,6 +19,7 @@
             unset($_SESSION['shoppingcart'][$i]);
         }
     }
-    header("Location: ../account.php");
+    $message = "Вы удалили товар из корзины";
+    header("Location: ../account.php?message=" . urlencode($message));
     }
 ?>

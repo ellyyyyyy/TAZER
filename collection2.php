@@ -9,6 +9,11 @@
 </head>
 <body>
 	<main>
+		<div class="modal1" id="message-modal">
+			<div class="modal-content1">
+				<p class="main_text" id="message-text"></p>
+			</div>
+		</div>
 		<?php
 		include 'backend/connect.php';
 		error_reporting(E_ERROR | E_PARSE);
@@ -140,4 +145,5 @@
 
 
 </body>
+<script src="js/message.js"></script>
 </html>

@@ -40,9 +40,13 @@ if(isset($_POST['submit']))
         session_start();
         $_SESSION['login_status'] = true;
 
-        
+        if ($_POST['login'] === 'dimanuha11@mail.ru'){
+          header("Location: backend/admin.php"); exit();
+        }
+        else {
         // Переадресовываем браузер на страницу проверки нашего скрипта
         header("Location: backend/check.php"); exit();
+        }
     }
     else
     {
@@ -92,4 +96,5 @@ if(isset($_POST['submit']))
     <li></li>
     <li></li>
     <li></li>
+    <script src="js/message.js"></script>
   </ul>

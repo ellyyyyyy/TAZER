@@ -14,10 +14,6 @@ if(isset($_POST['submit']))
     $err = [];
 
     // проверям логин
-    if(!preg_match("/^[a-zA-Z0-9]+$/",$_POST['login']))
-    {
-        $err[] = "<h2 class='meow'>Логин может состоять только из букв английского алфавита и цифр</h2>";
-    }
 
     if(strlen($_POST['login']) < 3 or strlen($_POST['login']) > 30)
     {
@@ -68,7 +64,7 @@ if(isset($_POST['submit']))
           </div>
           <div class="modal-body">
           <form method="POST">
-          <label> Логин </label> <input placeholder="Введите Ваш логин" name="login" type="text" required><br>
+          <label> Логин </label> <input placeholder="Введите Вашу электронную почту" name="login" type="email" required><br>
           <label> Пароль </label> <input placeholder="Введите Ваш пароль" name="password" type="password" required><br>
             <input class="input" name="submit" type="submit" value="Регистрация">
             </form>
@@ -94,3 +90,4 @@ if(isset($_POST['submit']))
                     <li></li>
                     <li></li>
             </ul>
+            <script src="js/message.js"></script>

@@ -10,6 +10,11 @@
 <body>
 
 	<main>
+		<div class="modal1" id="message-modal">
+			<div class="modal-content1">
+				<p class="main_text" id="message-text"></p>
+			</div>
+		</div>
 		<?php
 		include 'backend/connect.php';
 		$connection = mysqli_connect($host, $user, $passw, $db_name);
@@ -63,16 +68,18 @@
             <?php
 			if(isset($_SESSION['shoppingcart']) && count($_SESSION['shoppingcart'])) {
 				$list = $_SESSION['shoppingcart'];
+				$total_price = 0;
 				foreach($list as $item) {
-				$id = $item['id'];
-				$query  = "SELECT * FROM products WHERE id='$id'";
-				$result = mysqli_query($connection, $query);
+					$id = $item['id'];
+					$query  = "SELECT * FROM products WHERE id='$id'";
+					$result = mysqli_query($connection, $query);
 				if(mysqli_num_rows($result) == 1) {
 					$row = mysqli_fetch_array($result);
 					$id = $_GET['id'];
 					$name = $_GET['name'];
 					$price = $_GET['price'];
 					$category = $_GET['category'];
+					$total_price += str_replace(' ', '', $row['price']);
 				?>	
 					<form action='backend/deletecart.php?id=<?= $row['id'] ?>' method='post'>
 						<div class="products_item" data-category="<?= $row['category'] ?>">
@@ -82,11 +89,13 @@
 							<img class="products_img" src="img/<?= $row['id'] ?>.png" alt="1">
 							<p class="products_name"><?= $row['name'] ?></p>
 							<div class="products_wrapper">
-								<p class="products_price"><?= $row['price'] ?></p>
+								<p class="products_price"><?= $row['price'] ?> ₽</p>
 							</div>
+							
 						</div>
 					</form>
 				<?php
+				
 						}
 						}
 					} else {
@@ -95,12 +104,34 @@
 				?>  
 				<?php
 					if(mysqli_num_rows($result) == 1) {
+						
 				?>
 						
 				</div>
+				<div class="wrappercart">
 					<form action="backend/reset.php" method="GET">
-						<input class="product_button" type="submit" value="Очистить" name="reset" id="reset" />
+						<input class="buttoncart" type="submit" value="Очистить" name="reset" id="reset" />
 					</form>
+					<?php
+						if ($status) {
+					?>
+					<form action="backend/addcarttobd.php" method="GET">
+						<input class="buttoncart" type="submit" value="Заказать"/>
+					</form>
+					<?php
+					}
+					else {
+					?>
+					<p class='result'>Для заказа требуется авторизация</p>
+					<?php
+					}
+					?>
+					<?php
+					echo "<p class='main_text'>Стоимость корзины<p class='result'>";
+					echo $total_price;
+					echo " рублей</p>";
+					?>
+				</div>
 				<?php
 					}
 				?>  
@@ -134,4 +165,5 @@
 	</footer>
 
 </body>
+<script src="js/message.js"></script>
 </html>

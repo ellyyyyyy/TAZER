@@ -52,8 +52,14 @@ if(isset($_POST['submit']))
 ?>
 
 
-<link rel="stylesheet" href="css/style.css?<?php echo time(); ?>">
-<link rel="stylesheet" href="css/back.css?<?php echo time(); ?>">
+<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/intro.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/products.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/other-main.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/products-page.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/account.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/admin.css?<?php echo time(); ?>">
+  <link rel="stylesheet" href="../css/back.css?<?php echo time(); ?>">
 <div class="container">
     <div id="otkrutokno" class="modal">
       <div class="modal-dialog">
@@ -68,6 +74,7 @@ if(isset($_POST['submit']))
           <label> Пароль </label> <input placeholder="Введите Ваш пароль" name="password" type="password" required><br>
             <input class="input" name="submit" type="submit" value="Регистрация">
             </form>
+            <a class="main_text link" href="login.php">Уже есть аккаунт?</a>
           </div>
         </div>
       </div>

@@ -55,8 +55,14 @@ if(isset($_POST['submit']))
 }
 ?>
 
-<link rel="stylesheet" href="css/style.css?<?php echo time(); ?>">
-<link rel="stylesheet" href="css/back.css?<?php echo time(); ?>">
+<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/intro.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/products.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/other-main.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/products-page.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/account.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/admin.css?<?php echo time(); ?>">
+  <link rel="stylesheet" href="../css/back.css?<?php echo time(); ?>">
 <div class="container">
     <div id="otkrutokno2" class="modal">
       <div class="modal-dialog">
@@ -67,9 +73,10 @@ if(isset($_POST['submit']))
           </div>
           <div class="modal-body">
           <form method="POST">
-          <label> Логин </label><input placeholder="Введите Ваш логин" name="login" type="text" required><br>
+          <label> Логин </label><input placeholder="Введите Вашу почту" name="login" type="text" required><br>
           <label> Пароль </label> <input placeholder="Введите Ваш пароль" name="password" type="password" required><br>
             <input class="input" name="submit" type="submit" value="Войти">
+            <a class="main_text link" href="registration.php">Регистрация</a>
         </form>
           </div>
         </div>

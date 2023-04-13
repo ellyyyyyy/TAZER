@@ -31,8 +31,13 @@ else
     print "<h2 class='meow'>Включите куки</h2>";
 }
 ?>
-<link rel="stylesheet" href="../css/style.css?<?php echo time(); ?>">
-<link rel="stylesheet" href="../css/back.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/intro.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="../css/products.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="../css/other-main.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="../css/products-page.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="../css/account.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="../css/admin.css?<?php echo time(); ?>">
   <ul class="circles">
                     <li></li>
                     <li></li>

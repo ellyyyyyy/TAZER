@@ -1,0 +1,344 @@
+.help_text p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.help_text h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #50ff61;
+  margin-bottom: 10px;
+}
+
+.help_text ul {
+  color: white;
+  list-style: circle;
+  margin-bottom: 30px;
+}
+
+.pink {
+  color: #f8cad7;
+  border-color: #f8cad7;
+}
+
+input[type="radio"]:checked + .label.pink {
+  border-color: #f8cad7;
+  width: 50px;
+}
+
+.white {
+  color: white;
+  border-color: white;
+}
+
+input[type="radio"]:checked + .label.white {
+  border-color: white;
+  width: 50px;
+}
+
+.modal {
+  position: fixed;
+  /* фиксированное положение */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  /* цвет фона */
+  z-index: 1050;
+
+  /* по умолчанию модальное окно прозрачно */
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+
+/* при отображении модального окно */
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+  overflow-y: auto;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: auto;
+  overflow-y: auto;
+}
+
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 600px;
+    margin: 140px auto;
+  }
+}
+
+/* свойства для блока, содержащего контент модального окна */
+.modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  background-color: #202020;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+  justify-content: center;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4.69vw;
+  margin-top: 10px;
+  background-color: #2d2d2d;
+  border-radius: 20px;
+}
+
+/* свойства для заголовка модального окна */
+.modal-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eceeef;
+}
+
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+/* свойства для кнопки "Закрыть" */
+.close {
+  float: right;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: white;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus,
+.close:hover {
+  color: #50ff61;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 25px 10px;
+  overflow: auto;
+}
+
+.modal-body form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.modal-body form input {
+  width: 336px;
+  height: 50px;
+  background: #ffffff;
+  border: 1px solid #c2c6cc;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  padding-left: 10px;
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  color: #50ff61;
+}
+
+.modal-body form .input {
+  width: 187px;
+  height: 54px;
+  background: #ffffff;
+  border-radius: 30px;
+  margin-top: 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: #2d2d2d;
+  transition: all 0.3s ease;
+  padding-left: 0px;
+}
+
+.modal-body form label {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.modal-body form input:hover {
+  transform: scale(1.02);
+}
+
+.modal-body form button:hover {
+  transform: scale(1.02);
+  color: white;
+  background: #2d2d2d;
+  border-color: #202020;
+}
+
+.meow {
+  font-family: "Montserrat";
+  font-style: bold;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 17px;
+  color: #ffffff;
+  text-align: center;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+/* Страница аккаунта****************************/
+
+.btn {
+  background-color: transparent;
+  padding: 10px 12px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  position: absolute;
+  border: 0px;
+}
+.btn:hover,
+button:hover {
+  outline: 0;
+  color: #50ff61;
+}
+.btn:active,
+button:active {
+  outline: 0;
+  color: #50ff61;
+}
+.btn-slide-left {
+  background: linear-gradient(to left, transparent 50%, #333 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.btn-slide-left:hover {
+  background-position: left bottom;
+}
+
+.wrapper_cart {
+  max-width: 67vw;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 5.21vw;
+  justify-content: space-around;
+}
+
+.products_list3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 3.65vw;
+  min-height: 20.46vw;
+  width: 56.83vw;
+  margin-right: 20px;
+}
+
+.buttoncart {
+  margin-bottom: 1.04vw;
+  display: flex;
+  width: 300px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  border: 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  background: #484848;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  color: white;
+  text-decoration: none;
+}
+
+.buttoncart:hover {
+  color: #50ff61;
+  transform: scale(1.05);
+}
+
+.wrappercart {
+  display: block;
+  width: 33.83vw;
+}
+
+.result {
+  padding: 20px 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 30px;
+  color: #50ff61;
+}

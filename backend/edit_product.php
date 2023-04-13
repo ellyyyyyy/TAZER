@@ -58,15 +58,49 @@ $conn->close();
 ?>
 
 <!-- форма редактирования товара -->
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-  <input type="hidden" name="id" value="<?php echo $id;?>">
-  <label for="name">Название товара:</label>
-  <input type="text" id="name" name="name" value="<?php echo $name;?>"><br><br>
-  <label for="price">Цена товара:</label>
-  <input type="text" id="price" name="price" value="<?php echo $price;?>"><br><br>
-  <label for="category">Категория товара:</label>
-  <input type="text" id="category" name="category" value="<?php echo $category;?>"><br><br>
-  <label for="collection">Коллекция товара:</label>
-  <input type="text" id="collection" name="collection" value="<?php echo $collection;?>"><br><br>
-  <input type="submit" value="Сохранить изменения">
+<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/intro.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="../css/products.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="../css/other-main.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="../css/products-page.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="../css/account.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="../css/admin.css?<?php echo time(); ?>">
+  <link rel="stylesheet" href="../css/back.css?<?php echo time(); ?>">
+<div class="wrapper">
+<div class="addform_main">
+<form class="addform" style="flex-direction: column;align-items: center;" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+  <input class="addform_input" type="hidden" name="id" value="<?php echo $id;?>">
+  <label class='result' for="name">Название товара</label>
+  <input class="addform_input" type="text" id="name" name="name" value="<?php echo $name;?>"><br><br>
+  <label class='result' for="price">Цена товара</label>
+  <input class="addform_input" type="text" id="price" name="price" value="<?php echo $price;?>"><br><br>
+  <label class='result' for="category">Категория товара</label>
+  <input class="addform_input" type="text" id="category" name="category" value="<?php echo $category;?>"><br><br>
+  <label class='result' for="collection">Коллекция товара</label>
+  <select class="addform_input" name="collection">
+    <option value="">Нет</option>
+    <option value="pink" <?php if ($collection == 'pink') echo 'selected'; ?>>Quartz Pink</option>
+    <option value="white" <?php if ($collection == 'white') echo 'selected'; ?>>Mercury White</option>
+  </select>
+  <input class="addform_input" type="submit" value="Сохранить изменения">
+  <a class="addform_back" href="admin.php">Отменить</a>
 </form>
+</div>
+</div>
+<ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>

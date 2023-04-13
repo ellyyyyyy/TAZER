@@ -1,0 +1,288 @@
+/*Помощь*/
+
+.wrapper_help {
+  max-width: 67vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.help {
+  background: url(../img/help.png) no-repeat;
+  height: 20.8vw;
+  width: 100%;
+  justify-content: center;
+}
+
+.help_title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 3.64vw;
+  line-height: 2.7vw;
+  color: #50ff61;
+  padding-top: 3.6vw;
+  padding-left: 3.125vw;
+  padding-bottom: 2.08vw;
+}
+
+.help_subtitle {
+  padding-left: 3.125vw;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.66vw;
+  line-height: 2.08vw;
+  color: #ffffff;
+  max-width: 556px;
+}
+
+.help_button {
+  width: 11.45vw;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-left: 3.125vw;
+  margin-top: 1.5625vw;
+  transition: all 0.5s ease-out;
+}
+.help_button:hover {
+  border-radius: 6px;
+  background: #2d2d2d;
+  color: #50ff61;
+}
+
+.help_button:hover a {
+  transition: all 0.5s ease-out;
+}
+
+.help_button:hover a {
+  color: #50ff61;
+}
+
+.button_text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 0.9375vw;
+  color: #202020;
+  text-decoration: none;
+}
+
+/*Коллекции******************************************/
+
+.collections_text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 2vw;
+  line-height: 48px;
+  color: #ffffff;
+  margin-top: 90px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.collections_zone {
+  width: 100%;
+  position: absolute;
+}
+
+.collection1 {
+  width: 49.9%;
+  height: 39.1vw;
+  transition: all 0.5s ease-out;
+  z-index: 2;
+  background-color: none;
+}
+
+.collection2 {
+  width: 50.1%;
+  height: 39.1vw;
+  transition: all 0.5s ease-out;
+  z-index: 2;
+  background-color: none;
+}
+
+.collection1:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.collection2:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.collections_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.collection1_text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 3vw;
+  line-height: 78px;
+  color: #ffffff;
+  text-decoration: none;
+  position: absolute;
+  left: -1700px;
+  transition: all 500ms ease-in-out;
+  z-index: 3;
+}
+
+.collection1:hover + .collection1_text {
+  left: 80px;
+}
+
+.collection1_text:hover {
+  left: 80px;
+  color: #484848;
+}
+
+.collection2_text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 3vw;
+  line-height: 78px;
+  color: #ffffff;
+  text-decoration: none;
+  position: absolute;
+  right: -1800px;
+  transition: all 500ms ease-in-out;
+  z-index: 3;
+}
+
+.collection2:hover + .collection2_text {
+  right: 70px;
+}
+
+.collection2_text:hover {
+  right: 70px;
+  color: #484848;
+}
+
+/*Подписка на рассылку**************************************/
+
+.subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.email {
+  width: 41.35vw;
+  height: 52px;
+  background: #ffffff;
+  border: 1px solid #e8eaec;
+  border-radius: 26px;
+  padding-left: 30px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.email_button {
+  position: relative;
+  right: 50px;
+  top: 0px;
+  background-image: url(../svg/email.svg);
+  width: 52px;
+  height: 52px;
+  border: 0px;
+  border-radius: 50%;
+  transition: all 200ms ease-in-out;
+}
+
+.email_button:hover {
+  box-shadow: 0 0 5px 1px;
+  transform: scale(1.1);
+}
+
+input::placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #9a9a9a;
+}
+
+.form_email {
+  display: flex;
+}
+
+.sub_text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.subsub_text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+/*Подвал*********************************************/
+
+.wrapper_footer {
+  margin-top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.footer_h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 61px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+
+.footer_h2:hover {
+  color: #9a9a9a;
+}
+
+.footer_p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.spisok_item {
+  margin-bottom: 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+
+.spisok_item:hover {
+  color: #9a9a9a;
+}

@@ -4,7 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/intro.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/products.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/other-main.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/products-page.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/account.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/admin.css?<?php echo time(); ?>">
 	<title>Тейзер</title>
 </head>
 <body>
@@ -80,8 +85,11 @@
 						<p>15 499 руб</p>
 						<p>В наличии</p>
 					</div>
-					<form class="buy" action="">
-						<button class="product_button" type="submit">В корзину</button>
+					<form action='backend/addcart.php?id=55' method='post'>
+						<input type="hidden" name="name" value="Tazer Deathstalker V2">
+						<input type="hidden" name="price" value="15499">
+						<input type="hidden" name="category" value="keyboard">
+						<button class="product_button" name='add' id='add' type="submit">В корзину</button>
 					</form>
 				</div>
 			</div>
@@ -93,9 +101,9 @@
 					<p class="sub_text">Подпишитесь</p>
 					<p class="subsub_text">на расслылку<br>новостей!</p>
 			    </div>
-			    <form class="form_email" action="subscribe.php" method="post">
-				  <input class="email" placeholder="Ваша почта" type="email" id="email" name="email"><br><br>
-				  <input class="email_button" type="submit" value="">
+				<form class="form_email" action="backend/subscribe.php" method="post">
+					<input class="email" placeholder="Ваша почта" type="email" id="email" name="email"><br><br>
+					<input class="email_button" type="submit" value="">
 				</form>
 		    </div>
 		</div>

@@ -9,7 +9,7 @@
 
 .help {
   background: url(../img/help.png) no-repeat;
-  height: 20.8vw;
+  height: 23.8vw;
   width: 100%;
   justify-content: center;
 }
@@ -38,7 +38,7 @@
 }
 
 .help_button {
-  width: 11.45vw;
+  width: 220px;
   height: 60px;
   background: #ffffff;
   border-radius: 10px;

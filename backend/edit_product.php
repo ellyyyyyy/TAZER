@@ -1,10 +1,10 @@
 <?php
 // подключаемся к базе данных
 $host = "localhost";
-$dbname = "tazer";
-$username = "root";
-$password = "";
-$conn = new mysqli($host, $username, $password, $dbname);
+$user = "root";
+$passw = "";
+$db_name = "tazer";
+$conn = new mysqli($host, $username, $passw, $db_name);
 
 // проверяем соединение
 if ($conn->connect_error) {

@@ -7,9 +7,9 @@
 	<link rel="stylesheet" href="css/intro.css?<?php echo time(); ?>">
 	<link rel="stylesheet" href="css/products.css?<?php echo time(); ?>">
 	<link rel="stylesheet" href="css/other-main.css?<?php echo time(); ?>">
-	<link rel="stylesheet" href="css/products-page.css?<?php echo time(); ?>">
 	<link rel="stylesheet" href="css/account.css?<?php echo time(); ?>">
 	<link rel="stylesheet" href="css/admin.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="css/products-page.css?<?php echo time(); ?>">
 	<title>Тейзер</title>
 </head>
 <body>

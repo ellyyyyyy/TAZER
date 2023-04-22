@@ -1,4 +1,4 @@
-<?
+  <?
 // Функция для генерации случайной строки
 function generateCode($length=6) {
     $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHI JKLMNOPRQSTUVWXYZ0123456789";
@@ -11,11 +11,10 @@ function generateCode($length=6) {
 }
 
 // Соединямся с БД
-$host = "tazer";
+$host = "localhost";
 $user = "root";
 $passw = "";
 $db_name = "tazer";
-
 
 $link=new mysqli($host, $user, $passw, $db_name);
 

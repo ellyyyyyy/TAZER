@@ -1,8 +1,8 @@
 <?php 
-    $host = "tazer";
-    $user = "root";
-    $passw = "";
-    $db_name = "tazer";
+$host = "localhost";
+$user = "root";
+$passw = "";
+$db_name = "tazer";
 
     $conn = new mysqli($host, $user, $passw, $db_name);
     session_start();

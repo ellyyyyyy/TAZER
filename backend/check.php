@@ -2,7 +2,7 @@
 // Скрипт проверки
 
 // Соединямся с БД
-$host = "tazer";
+$host = "localhost";
 $user = "root";
 $passw = "";
 $db_name = "tazer";

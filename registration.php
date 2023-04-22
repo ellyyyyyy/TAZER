@@ -2,7 +2,7 @@
 // Страница регистрации нового пользователя
 
 // Соединямся с БД
-$host = "tazer";
+$host = "localhost";
 $user = "root";
 $passw = "";
 $db_name = "tazer";

@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    $host = "tazer";
+    $host = "localhost";
     $user = "root";
     $passw = "";
     $db_name = "tazer";
